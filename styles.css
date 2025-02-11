@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7e6d2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.game-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 2.5em;
+    color: #ff5722;
+    margin-bottom: 20px;
+}
+
+.game-area {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: #f2f2f2;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.lantern {
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    background-color: #ff4081;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.lantern.active {
+    background-color: #ffeb3b; /* 点亮后的黄色 */
+}
+
+.lantern:nth-child(1) { top: 50px; left: 50px; }
+.lantern:nth-child(2) { top: 50px; left: 150px; }
+.lantern:nth-child(3) { top: 50px; left: 250px; }
+.lantern:nth-child(4) { top: 200px; left: 100px; }
+.lantern:nth-child(5) { top: 200px; left: 200px; }
+
+.message {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 10px;
+}
+
+.restart-button {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.restart-button:hover {
+    background-color: #e64a19;
+}
+
+@keyframes lanternAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
